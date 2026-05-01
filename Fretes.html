@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="/TranscargaLogo.png" type="image/png">
+        <link rel="stylesheet" href="Fretes.css">
+        <meta charset="UTF-8">
+        <title>Cadastrar Frete</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="#" class="logo">
+                <img src="/TranscargaLogo.png" class="logo-img" alt="Transcarga">
+            </a>
+
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Fretes</a>
+                <a href="#">Relatórios</a>
+            </nav>
+
+            <div class="status-badge">
+                <span class="dot"></span> Sistema ativo
+            </div>
+        </header>
+
+        <main class="grid-wrap">
+            <div class="grid" id="FreteGrid"></div>
+        </main>
+
+            <p class="final-footer">© 2026 Transcarga — Transporte e segurança</p>
+
+        <script>
+            const fretes = [
+            {
+                destino: "São Paulo, SP",
+                peso: "10 kg",
+                transportadora: "Correios"
+            },
+            {
+                destino: "Rio de Janeiro, RJ",
+                peso: "25 kg",
+                transportadora: "Jadlog"
+            },
+            {
+                destino: "Belo Horizonte, MG",
+                peso: "5 kg",
+                transportadora: "Total Express"
+            },
+            ];
+
+            function renderCards() {
+            const grid = document.getElementById('FreteGrid');
+            grid.innerHTML = fretes.map(f => `
+                <div class="frete-card">
+                <div class="frete-card-body">
+                    <p class="frete-card-name">${f.destino}</p>
+                    <p class="frete-card-desc">Peso: ${f.peso}</p>
+                    <p class="frete-card-desc">Transportadora: ${f.transportadora}</p>
+                    <div class="frete-card-footer">
+                    <button class="frete-btn">Ver mais</button>
+                    </div>
+                </div>
+                </div>`).join('');
+            }
+
+            renderCards();
+        </script>
+
+        
+    </body>
+</html>

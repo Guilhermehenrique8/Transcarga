@@ -8,31 +8,33 @@
     </head>
 
     <body>
-        <header class="header">
-            <a href="#" class="logo">
-                <img src="/TranscargaLogo.png" class="logo-img" alt="Transcarga">
-            </a>
 
-            <nav class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Fretes</a>
-                <a href="#">Relatórios</a>
-            </nav>
-
-            <div class="status-badge">
-                <span class="dot"></span> Sistema ativo
-            </div>
-        </header>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Fretes.html">Fretes</a>
+            <a href="Relatorios.html">Relatórios</a>
+        </nav>
 
         <main>
-            <div class="container">
-               
+
+            <!-- Lado esquerdo: Logo grande -->
+            <div class="lado-logo">
+                <img src="/TranscargaLogo.png" class="logo-grande" alt="Transcarga">
+                <p class="final-footer">© 2026 Transcarga — Transporte e segurança</p>
+            </div>
+
+            <!-- Lado direito: Formulário -->
+            <div class="lado-form">
+
+                <div class="status-badge">
+                    <span class="dot"></span> Sistema ativo
+                </div>
+
                 <div class="card-header">
-                    <img src="CadastroLogo.png" class="icone-cadastro" alt="icone-cadastro">
                     <h1>Cadastrar Frete</h1>
                     <h2>Preencha os dados da nova carga para registro no sistema</h2>
                 </div>
-               
+
                 <form action="FreteServlet" method="post" accept-charset="UTF-8">
                     <div class="field">
                         <label>Destino:</label>
@@ -44,21 +46,24 @@
                         <input type="number" name="peso" placeholder="Ex: 150" required>
                     </div>
 
-                    <div class="field">  
+                    <div class="field">
                         <label>Transportadora:</label>
                         <input type="text" name="transportadora" placeholder="Ex: Rápido Ltda" required>
                     </div>
+
+                    <div class="card-footer">
+                        <a href="index.html" class="btn-home">← Home</a>
+                        <button type="submit" class="btn-submit">Cadastrar Frete</button>
+                    </div>
                 </form>
 
-                <footer class="card-footer">
-                    <a href="index.html" class="btn-home">← Home</a>
-                    <button type="submit" class="btn-submit">Cadastrar Frete</button>
-                </footer>
+                
 
             </div>
+
+                
+
         </main>
 
-        <footer class="final-footer">© 2025 Transcarga — Transporte e segurança</footer>
-        
     </body>
 </html>

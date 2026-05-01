@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Syne', sans-serif;
+    background: linear-gradient(160deg, #111111 60%, #1a1700 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#FreteGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.header {
+    
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 2rem;
+    height: 52px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.logo{
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    color: #d5c80a;
+    font-size: 22px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    text-decoration: none;  
+}
+
+.logo-img {
+    height: 40px;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links a {
+    font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.7s;
+    color: #d0c421;
+}
+
+.nav-links a:hover{
+    color: white;
+    font-size: 17px;
+}
+
+.status-badge {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    background: linear-gradient(160deg, #111111 60%, #1a1700 100%);
+    color: #ebe700;
+    padding: 3px 8px;
+    border-radius: 99px;
+    position: absolute;
+    
+    right: 1.5rem;
+    border: solid 1px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #cfea02;
+    border-radius: 50%;
+    animation: pulsar 1.5s infinite;
+}
+
+@keyframes pulsar {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    background: linear-gradient(160deg, #111111 60%, #1a1700 100%);
+}
+
+.final-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+    color: rgba(236, 220, 4, 0.873);
+    letter-spacing: 0.5px;
+}
+.frete-card {
+    background-color: #161616;
+    border: 1px solid rgba(208, 196, 33, 0.15);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.frete-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(208, 196, 33, 0.5);
+    box-shadow: 0 8px 24px rgba(208, 196, 33, 0.08);
+}
+
+.frete-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex:1;
+}
+
+.frete-card-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #f0f0f0;
+    margin: 0;
+}
+
+.frete-card-desc {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+    margin: 0;
+}
+
+.frete-card-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.frete-btn {
+    background-color: transparent;
+    border: 1px solid rgba(208, 196, 33, 0.6);
+    color: #d0c421;
+    padding: 0.45rem 1.1rem;
+    border-radius:6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.frete-btn:hover {
+    background-color: #d0c421;
+    color: #0a0a0a;
+}
